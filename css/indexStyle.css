@@ -1,0 +1,401 @@
+@font-face {
+  src: url("../fonts/hinted-GorditaBold.ttf");
+  font-family: 'Gordita Bold'; }
+@font-face {
+  src: url("../fonts/hinted-GorditaMedium.ttf");
+  font-family: 'Gordita Medium'; }
+@font-face {
+  src: url("../fonts/hinted-GorditaRegular.ttf");
+  font-family: 'Gordita Regular'; }
+@font-face {
+  src: url("../fonts/A8ABDE12F18C753619F57193C5FA296E.TTF");
+  font-family: 'New Style'; }
+.flex-bet-center, .developer-profile .top-bar, .developer-profile .top-bar .left-side, .developer-profile .top-bar .right-side, .developer-profile .top-bar .right-side .labels-container, .developer-profile .top-bar .right-side .labels-container .labels, .developer-profile .top-bar .right-side .labels-container .labels ul, .developer-profile .top-bar .right-side .labels-container .drop-down, .developer-profile .top-bar .right-side .labels-container .drop-down form, .developer-profile .top-bar .right-side .labels-container .drop-down form ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.flex-end-center, .developer-profile .top-bar .right-side .user-bar, .developer-profile .bottom-bar .invite-div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
+
+.user-img-continer, .developer-profile .top-bar .right-side .user-bar .user-img, .developer-profile .bottom-bar .invite-div .user-img {
+  position: relative;
+  width: 35px;
+  height: 35px; }
+
+.developer-profile .top-bar .right-side .user-bar .user-img img, .developer-profile .bottom-bar .invite-div .user-img img {
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+.basic-btn, .developer-profile .top-bar .left-side .open button, .developer-profile .bottom-bar .invite-div button, .developer-profile aside .open button {
+  background: none;
+  outline: none;
+  border: none; }
+
+.circle, .developer-profile .top-bar .left-side .open button, .developer-profile .top-bar .right-side .user-bar .user-img, .developer-profile .top-bar .right-side .user-bar .user-img .alert, .developer-profile .bottom-bar .invite-div .user-img img, .developer-profile .bottom-bar .invite-div .user-img .alert, .developer-profile aside .open button {
+  border-radius: 50%; }
+
+.native-position, .developer-profile aside {
+  position: absolute;
+  left: 0;
+  top: 0; }
+
+.hidden {
+  display: none; }
+
+.dis-flex {
+  display: flex; }
+
+.translate-up {
+  transform: translateY(-1.15rem); }
+
+.gray-color {
+  color: #b4b4b4; }
+
+.opacity-0 {
+  opacity: 0; }
+
+.opacity-1 {
+  opacity: 1; }
+
+* {
+  box-sizing: border-box;
+  font-family: "Gordita Regular"; }
+
+body {
+  margin: 0; }
+
+.developer-profile {
+  background-color: #fff;
+  position: relative;
+  min-height: 626px;
+  width: 100%; }
+  .developer-profile header {
+    padding: 10px; }
+  .developer-profile .top-bar .left-side .open {
+    padding: 0 10px; }
+    .developer-profile .top-bar .left-side .open button {
+      background-color: #eeeeee;
+      padding: 10px 13px; }
+      .developer-profile .top-bar .left-side .open button:hover {
+        cursor: pointer; }
+  .developer-profile .top-bar .left-side .title-2 {
+    font-size: 20px;
+    color: #303030;
+    padding: 0 10px;
+    display: none; }
+    .developer-profile .top-bar .left-side .title-2 span {
+      font-family: "Gordita Regular";
+      text-transform: capitalize;
+      font-size: 19px; }
+  .developer-profile .top-bar .left-side .status {
+    padding: 0 10px;
+    display: none; }
+    .developer-profile .top-bar .left-side .status span {
+      font-family: "Gordita Regular";
+      text-transform: capitalize;
+      font-size: 13px;
+      vertical-align: middle; }
+      .developer-profile .top-bar .left-side .status span:nth-child(2) {
+        color: #b4b4b4; }
+      .developer-profile .top-bar .left-side .status span + span {
+        margin-left: 1rem; }
+  .developer-profile .top-bar .right-side {
+    position: relative;
+    flex-direction: row-reverse;
+    font-size: 12px; }
+    .developer-profile .top-bar .right-side .user-bar {
+      flex-direction: row-reverse;
+      padding-right: .5rem; }
+      .developer-profile .top-bar .right-side .user-bar .user-img {
+        overflow: hidden; }
+        .developer-profile .top-bar .right-side .user-bar .user-img .alert {
+          height: 18px;
+          width: 18px;
+          position: absolute;
+          left: 1.5px;
+          top: 12px;
+          background-color: blue;
+          text-align: center;
+          z-index: -1; }
+          .developer-profile .top-bar .right-side .user-bar .user-img .alert span {
+            color: #fff;
+            font-family: "Gordita Regular";
+            font-size: 10px;
+            vertical-align: middle; }
+      .developer-profile .top-bar .right-side .user-bar span {
+        text-transform: capitalize;
+        margin-right: 1rem; }
+    .developer-profile .top-bar .right-side .labels-container {
+      position: relative;
+      flex-direction: row-reverse;
+      margin-right: -4.1rem; }
+      .developer-profile .top-bar .right-side .labels-container .labels {
+        visibility: hidden; }
+        .developer-profile .top-bar .right-side .labels-container .labels ul {
+          list-style: none;
+          padding-left: 0; }
+          .developer-profile .top-bar .right-side .labels-container .labels ul li {
+            padding: 0 .5rem; }
+            .developer-profile .top-bar .right-side .labels-container .labels ul li:last-child {
+              padding-left: 1.5rem; }
+            .developer-profile .top-bar .right-side .labels-container .labels ul li:nth-child(2) a {
+              color: #b4b4b4; }
+            .developer-profile .top-bar .right-side .labels-container .labels ul li a {
+              text-decoration: none;
+              color: #423f3f;
+              text-transform: capitalize; }
+      .developer-profile .top-bar .right-side .labels-container .drop-down {
+        margin-right: -12rem;
+        visibility: hidden; }
+        .developer-profile .top-bar .right-side .labels-container .drop-down form ul {
+          list-style: none;
+          padding-left: 0; }
+          .developer-profile .top-bar .right-side .labels-container .drop-down form ul li {
+            padding-right: .5rem; }
+  .developer-profile .bottom-bar {
+    display: none;
+    justify-content: flex-end;
+    font-size: 12px;
+    padding-top: .5rem; }
+    .developer-profile .bottom-bar .invite-div {
+      flex-direction: row-reverse;
+      margin-right: 2rem; }
+      .developer-profile .bottom-bar .invite-div button {
+        padding: .5rem .75rem;
+        border: 1px solid #eee;
+        border-radius: 75px; }
+        .developer-profile .bottom-bar .invite-div button:hover {
+          cursor: pointer; }
+      .developer-profile .bottom-bar .invite-div .user-img {
+        position: relative; }
+        .developer-profile .bottom-bar .invite-div .user-img .alert {
+          height: 10px;
+          width: 10px;
+          position: absolute;
+          left: 22.5px;
+          top: 28px; }
+        .developer-profile .bottom-bar .invite-div .user-img:first-of-type .alert {
+          background-color: red; }
+        .developer-profile .bottom-bar .invite-div .user-img:last-of-type .alert {
+          background-color: blue; }
+      .developer-profile .bottom-bar .invite-div button + .user-img {
+        margin-right: 1rem; }
+      .developer-profile .bottom-bar .invite-div .user-img + :not(span) {
+        margin-right: .2rem; }
+  .developer-profile aside {
+    height: 100%;
+    width: 16.6666666667%;
+    border-right: 1px solid #eee;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #fff;
+    box-shadow: 2px 0px 30px -10px #b4b4b4; }
+    @media (min-width: 768px) and (max-width: 991px) {
+      .developer-profile aside {
+        width: 22.2222222222%; } }
+    @media (max-width: 767px) {
+      .developer-profile aside {
+        width: 100%;
+        height: 100%;
+        position: absolute; } }
+    .developer-profile aside .open {
+      padding: 10px 0 0 20px;
+      width: 100%; }
+      .developer-profile aside .open button {
+        background-color: #eeeeee;
+        padding: 10px 13px;
+        background-color: #dc412e;
+        color: #fff; }
+        .developer-profile aside .open button:hover {
+          cursor: pointer; }
+    .developer-profile aside .nav-menu {
+      height: 92%;
+      width: 100%;
+      padding-left: 0; }
+      @media (max-width: 767px) {
+        .developer-profile aside .nav-menu {
+          height: 100%; } }
+      .developer-profile aside .nav-menu p {
+        text-transform: capitalize;
+        font-size: 25px;
+        line-height: 42px;
+        color: #303030;
+        font-family: "Gordita Medium";
+        font-weight: 500;
+        padding: 0 1rem 0 1rem; }
+        @media (max-width: 767px) {
+          .developer-profile aside .nav-menu p {
+            text-align: center; } }
+      .developer-profile aside .nav-menu .list {
+        padding-left: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; }
+        @media (max-width: 767px) {
+          .developer-profile aside .nav-menu .list {
+            padding-left: 2rem;
+            padding-right: 2rem; } }
+        .developer-profile aside .nav-menu .list .item-list {
+          font-size: 15px;
+          padding: 1rem 0 1rem 1rem; }
+          .developer-profile aside .nav-menu .list .item-list.active {
+            background-color: #eee;
+            border-right: 2px solid #b4b4b4; }
+          .developer-profile aside .nav-menu .list .item-list a {
+            text-decoration: none;
+            color: #303030;
+            text-transform: capitalize; }
+          .developer-profile aside .nav-menu .list .item-list:nth-of-type(2) a, .developer-profile aside .nav-menu .list .item-list:nth-of-type(5) a, .developer-profile aside .nav-menu .list .item-list:nth-of-type(6) a {
+            color: #b4b4b4; }
+          .developer-profile aside .nav-menu .list .item-list:nth-of-type(3) a {
+            font-family: "Gordita Bold"; }
+          .developer-profile aside .nav-menu .list .item-list:nth-of-type(1) a, .developer-profile aside .nav-menu .list .item-list:nth-of-type(4) a {
+            text-transform: uppercase;
+            font-family: 'New Style'; }
+  .developer-profile .info-section {
+    padding-bottom: 8rem;
+    display: flex;
+    flex-wrap: nowrap;
+    min-height: 100%;
+    height: 100%; }
+    .developer-profile .info-section .sparce-width {
+      width: 16.6666666667%;
+      height: 100%; }
+      @media (min-width: 768px) and (max-width: 991px) {
+        .developer-profile .info-section .sparce-width {
+          width: 22.2222222222%; } }
+      @media (max-width: 768px) {
+        .developer-profile .info-section .sparce-width {
+          width: 0; } }
+    .developer-profile .info-section .info {
+      flex-direction: column;
+      width: 83.3333333333%;
+      height: 100%; }
+      @media (min-width: 768px) and (max-width: 991px) {
+        .developer-profile .info-section .info {
+          width: 77.7777777778%; } }
+      @media (max-width: 768px) {
+        .developer-profile .info-section .info {
+          width: 100%; } }
+      .developer-profile .info-section .info .title-section {
+        width: 100%;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 2rem;
+        text-align: center; }
+        .developer-profile .info-section .info .title-section h1::first-letter, .developer-profile .info-section .info .title-section p::first-letter {
+          text-transform: capitalize;
+          text-align: center; }
+        .developer-profile .info-section .info .title-section h1 {
+          font-family: 'Gordita Bold';
+          font-size: 45px;
+          color: #423f3f; }
+          @media (min-width: 768px) and (max-width: 991px) {
+            .developer-profile .info-section .info .title-section h1 {
+              font-size: 50px; } }
+          @media (max-width: 768px) {
+            .developer-profile .info-section .info .title-section h1 {
+              font-size: 40px; } }
+        .developer-profile .info-section .info .title-section p {
+          color: #b4b4b4; }
+          @media (max-width: 768px) {
+            .developer-profile .info-section .info .title-section p {
+              font-size: 14px; } }
+      .developer-profile .info-section .info .form-section {
+        padding: 2rem 0; }
+        .developer-profile .info-section .info .form-section .title-form {
+          width: 50%;
+          text-align: left;
+          margin: auto;
+          padding-bottom: 2rem; }
+          @media (min-width: 768px) and (max-width: 991px) {
+            .developer-profile .info-section .info .form-section .title-form {
+              width: 55%; } }
+          @media (max-width: 768px) {
+            .developer-profile .info-section .info .form-section .title-form {
+              width: 100%; } }
+          .developer-profile .info-section .info .form-section .title-form h3::first-letter {
+            text-transform: capitalize; }
+          @media (max-width: 768px) {
+            .developer-profile .info-section .info .form-section .title-form h3 {
+              text-indent: 2rem; } }
+        .developer-profile .info-section .info .form-section form {
+          width: 50%;
+          margin: auto; }
+          @media (min-width: 768px) and (max-width: 991px) {
+            .developer-profile .info-section .info .form-section form {
+              width: 55%; } }
+          @media (max-width: 768px) {
+            .developer-profile .info-section .info .form-section form {
+              width: 60%; } }
+          .developer-profile .info-section .info .form-section form .input-area {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin-bottom: 2rem; }
+            .developer-profile .info-section .info .form-section form .input-area label {
+              transition: transform .3s ease , color .3s ease,   opacity .3s ease;
+              font-family: 'New Style'; }
+              .developer-profile .info-section .info .form-section form .input-area label::first-letter {
+                text-transform: capitalize; }
+            .developer-profile .info-section .info .form-section form .input-area input {
+              border: none;
+              outline: none;
+              margin: 0rem 0 1rem;
+              font-size: 30px;
+              width: 100%;
+              padding-bottom: 14px;
+              border-bottom: 2px solid #b4b4b4; }
+              .developer-profile .info-section .info .form-section form .input-area input::placeholder {
+                color: #b4b4b4;
+                font-size: 25px; }
+                @media (min-width: 768px) and (max-width: 991px) {
+                  .developer-profile .info-section .info .form-section form .input-area input::placeholder {
+                    font-size: 22px; } }
+                @media (max-width: 768px) {
+                  .developer-profile .info-section .info .form-section form .input-area input::placeholder {
+                    font-size: 18px; } }
+              .developer-profile .info-section .info .form-section form .input-area input:hover {
+                cursor: pointer; }
+              .developer-profile .info-section .info .form-section form .input-area input:focus::placeholder {
+                opacity: 0;
+                transition: opacity .3s ease; }
+            .developer-profile .info-section .info .form-section form .input-area .text-field {
+              overflow: hidden;
+              width: 100%;
+              position: relative; }
+              .developer-profile .info-section .info .form-section form .input-area .text-field i {
+                position: absolute;
+                right: 10px;
+                bottom: 20px; }
+            .developer-profile .info-section .info .form-section form .input-area .control-div {
+              width: 0;
+              height: 0;
+              font-size: 30px;
+              overflow: hidden; }
+            .developer-profile .info-section .info .form-section form .input-area .border-bar {
+              position: absolute;
+              height: 2px;
+              width: 0px;
+              transition: width .3s ease;
+              left: 0;
+              top: 55px; }
+          .developer-profile .info-section .info .form-section form select {
+            width: 100%;
+            padding: .5rem .5rem 14px;
+            border: none;
+            outline: none;
+            font-size: 25px;
+            border-bottom: 2px solid #b4b4b4;
+            text-transform: capitalize;
+            -webkit-appearance: none;
+            background: none; }
+            .developer-profile .info-section .info .form-section form select option {
+              font-size: 15px; }
+
+/*# sourceMappingURL=indexStyle.css.map */

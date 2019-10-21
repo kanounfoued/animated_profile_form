@@ -1,0 +1,665 @@
+
+
+@import '_variable';
+@import '_classes';
+
+
+*{
+    box-sizing: border-box;
+    font-family: "Gordita Regular";
+}
+
+body{
+    margin: 0;
+}
+
+
+
+.developer-profile {
+    background-color: $main-color;
+    position: relative;
+    min-height: 626px;
+    width: $full;
+
+
+    // start styling the top-bar 
+    header {
+        padding: 10px;
+    }
+
+    // start styling the top bar
+    .top-bar {
+        @extend .flex-bet-center;
+
+        // start styling the left side
+        .left-side {
+            @extend .flex-bet-center;
+            
+            .open {
+                padding: 0 10px;
+
+                button {
+                    @extend .circle;
+                    @extend .basic-btn;
+                    background-color: $open-btn-color;
+                    padding: 10px 13px;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+                
+            }
+
+            .title-2 {
+                font-size: 20px;
+                color: $label-color;
+                padding: 0 10px;
+                display: none;
+
+                span {
+                    font-family: "Gordita Regular";
+                    text-transform: capitalize;
+                    font-size: 19px;
+                }
+            }
+
+            .status {
+                padding: 0 10px;
+                display: none;
+
+                span {
+                    font-family: "Gordita Regular";
+                    text-transform: capitalize;
+                    font-size: 13px;
+                    vertical-align: middle;
+
+                    &:nth-child(2) {
+                        color: $text-color;
+                    }
+                    & + span {
+                        margin-left: 1rem;
+                    }
+
+                }
+            }
+
+        }
+        // start styling the left side
+
+        // start styling the right side
+        .right-side {
+            @extend .flex-bet-center;
+            position: relative;
+            flex-direction: row-reverse;
+            font-size: 12px;
+
+
+            // start styling the user-bar 
+            .user-bar {
+                @extend .flex-end-center;
+                flex-direction: row-reverse;
+                padding-right: .5rem;
+                
+
+                .user-img {
+                    @extend .circle;
+                    @extend .user-img-continer;
+                    overflow: hidden;
+
+                    img {
+                        @extend %img;
+                    }
+
+                    .alert {
+                        @extend .circle;
+                        height: 18px;
+                        width: 18px;
+                        position: absolute;
+                        left: 1.5px;
+                        top: 12px;
+                        background-color: blue;
+                        text-align: center;
+                        z-index: -1;
+
+                        span {
+                            color: #fff;
+                            font-family: "Gordita Regular";
+                            font-size: 10px;
+                            vertical-align: middle;
+                        }
+
+                    }
+
+                }
+
+                span {
+                    text-transform: capitalize;
+                    margin-right: 1rem;
+                }
+
+            }
+            // end styling the user-bar 
+
+            .labels-container {
+                @extend .flex-bet-center;
+                position: relative;
+                flex-direction: row-reverse;
+                margin-right: -4.1rem;
+
+                .labels {
+                    @extend .flex-bet-center;
+                    visibility: hidden;
+    
+                    ul {
+                        @extend .flex-bet-center;
+                        list-style: none;
+                        padding-left: 0;
+    
+    
+                        li {
+                            padding: 0 .5rem;
+    
+                            &:last-child {
+                                padding-left: 1.5rem;
+                            }
+    
+                            &:nth-child(2) a {
+                                color: $text-color;
+                            }
+    
+                            a {
+                                text-decoration: none;
+                                color: $title-color;
+                                text-transform: capitalize;
+                            }
+                        }   
+                    }
+    
+                }
+
+
+                // start styling thhe drop down 
+                .drop-down {
+                    @extend .flex-bet-center;
+                    margin-right: -12rem;
+                    visibility: hidden;
+
+                    form {
+                        @extend .flex-bet-center;
+
+                        ul {
+                            @extend .flex-bet-center;
+                            list-style: none;
+                            padding-left: 0;
+
+                            li {
+                                padding-right: .5rem;
+                            }
+                        }
+                        
+                    }
+
+                
+
+                }
+                // end styling the drop down 
+
+            }
+            // end styling the labels container
+
+            
+
+
+
+        }
+        // end styling the right side
+
+
+    }
+    // end styling the top bar
+
+
+    // start styling the buttom bar
+    .bottom-bar {
+        display: none;
+        justify-content: flex-end;
+        font-size: 12px;
+        padding-top: .5rem;
+
+        .invite-div {
+            @extend .flex-end-center;
+            flex-direction: row-reverse;
+            margin-right: 2rem;
+
+            button {
+                @extend .basic-btn;
+                padding: .5rem .75rem;
+                border: 1px solid #eee;
+                border-radius: 75px;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .user-img {
+                @extend .user-img-continer;
+                position: relative;
+
+                img {
+                    @extend %img;
+                    @extend .circle;
+                }
+
+                .alert {
+                    @extend .circle;
+                    height: 10px;
+                    width: 10px;
+                    position: absolute;
+                    left: 22.5px;
+                    top: 28px;
+                }
+
+                &:first-of-type .alert {
+                    background-color: red;
+                }
+                &:last-of-type .alert {
+                    background-color: blue;
+                }
+
+            }
+
+            button + .user-img {
+                margin-right: 1rem;
+            }
+
+            .user-img + :not(span) {
+                margin-right: .2rem;
+            }
+
+        }
+
+
+
+    }
+    // end styling the buttom bar
+
+    
+    
+    // start styling the aside bar 
+    aside {
+        @extend .native-position;
+        height: $full;
+        width: $full / $aside-space;
+        border-right: 1px solid #eee;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        background-color: #fff;
+        box-shadow: 2px 0px 30px -10px $text-color;
+
+        @media ( min-width: 768px ) and (max-width: 991px){
+            width: $full / $aside-space-md;
+        }
+
+        @media (max-width: 767px){
+            width: $full;
+            height: $full;
+            position: absolute;
+        }
+
+
+        // start styling open section
+        .open {
+            padding: 10px 0 0 20px;
+            width: 100%;
+
+            button {
+                @extend .circle;
+                @extend .basic-btn;
+                background-color: $open-btn-color;
+                padding: 10px 13px;
+                background-color: $close-btn-color;
+                color: #fff;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            
+        }
+        // end styling open section
+
+
+        // start styling the list of item section
+        .nav-menu {
+            height: 92%;
+            width: $full;
+            padding-left: 0;
+
+            @media (max-width: 767px){
+                height: $full;
+            }
+            
+
+            p {
+                text-transform: capitalize;
+                font-size: 25px;
+                line-height: 42px;
+                color: $label-color;
+                font-family: "Gordita Medium";
+                font-weight: 500;
+                padding: 0 1rem 0 1rem;
+
+                @media (max-width: 767px){
+                    text-align: center;
+                }
+            }
+
+            .list {
+                padding-left: 0;
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+
+                @media (max-width: 767px){
+                    padding-left: 2rem;
+                    padding-right: 2rem;
+                }
+
+                .item-list {
+                    font-size: 15px;
+                    padding: 1rem 0 1rem 1rem;
+
+                    &.active {
+                        background-color: #eee;
+                        border-right: 2px solid $text-color;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: $label-color;
+                        text-transform: capitalize;
+
+                    }
+
+                    &:nth-of-type(2) a, 
+                    &:nth-of-type(5) a, 
+                    &:nth-of-type(6) a {
+                        color: $text-color;
+                    }
+
+                    &:nth-of-type(3) a {
+                        font-family: 'Gordita Bold'
+                    }
+
+                    &:nth-of-type(1) a,
+                    &:nth-of-type(4) a {
+                        text-transform: uppercase;
+                        font-family: 'New Style';
+                    }
+                }
+            }
+
+        }
+        // end styling the list of item section
+
+        
+    }
+    // end styling the aside element
+
+
+
+    // start styling the info section
+    .info-section {
+        padding-bottom: 8rem;
+        display: flex;
+        flex-wrap: nowrap;
+        min-height: $full;
+        height: $full;
+
+        
+
+        .sparce-width {
+            width: $full / $aside-space;
+            height: $full;
+
+            @media ( min-width: 768px ) and (max-width: 991px) {
+                width: $full / $aside-space-md;
+            }
+
+            @media ( max-width: 768px ){
+                width: 0;
+            }
+    
+        }
+
+        .info {
+            flex-direction: column;
+            width: $full - ($full / $aside-space);
+            height: $full;
+
+            @media ( min-width: 768px ) and (max-width: 991px){
+                width: $full - ( $full / $aside-space-md );
+            }
+
+            @media ( max-width: 768px ){
+                width: $full;
+            }
+
+
+            .title-section {
+                width: $full;
+                border-bottom: 1px solid #eee;
+                padding-bottom: 2rem;
+                text-align: center;
+
+                h1::first-letter , p::first-letter {   
+                    text-transform: capitalize;
+                    text-align: center;
+                }
+    
+                h1 {
+                    font-family: 'Gordita Bold';
+                    font-size: 45px;
+                    color: $title-color;
+
+                    @media ( min-width: 768px ) and (max-width: 991px){
+                        font-size: 50px;
+                    }
+
+                    @media ( max-width: 768px ){
+                        font-size: 40px;
+                    }
+                }
+    
+                p {
+                    color: $text-color;
+
+                    @media ( max-width: 768px ){
+                        font-size: 14px;
+                    }
+                }
+
+            }
+
+            .form-section {
+                padding: 2rem 0; 
+
+                .title-form {
+                    width: 50%;
+                    text-align: left;
+                    margin: auto;
+                    padding-bottom: 2rem; 
+
+                    @media ( min-width: 768px ) and (max-width: 991px){
+                        width: 55%;
+                    }
+
+                    @media ( max-width: 768px ){
+                        width: $full;
+                    }
+
+                    h3 {
+
+                        &::first-letter {
+                            text-transform: capitalize;
+                        }
+
+                        @media ( max-width: 768px ){
+                            text-indent: 2rem;
+                        }
+
+                    }
+                    
+                }
+
+                form {
+                    width: 50%;
+                    margin: auto;
+
+                    @media ( min-width: 768px ) and (max-width: 991px){
+                        width: 55%;
+                    }
+
+                    @media ( max-width: 768px ){
+                        width: 60%;
+                    }
+
+                    .input-area {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start; 
+                        margin-bottom: 2rem;
+                        
+
+                        label {
+                            transition: transform .3s ease ,
+                                        color .3s ease,  
+                                        opacity .3s ease;
+                            font-family: 'New Style';
+
+                            &::first-letter {
+                                text-transform: capitalize;
+                            }
+
+                        }
+
+                        input {
+                            border: none;
+                            outline: none;
+                            margin: 0rem 0 1rem;
+                            font-size: 30px;
+                            width: $full;
+                            padding-bottom: 14px;
+                            border-bottom: 2px solid $text-color;
+
+                            &::placeholder {
+                                color: $text-color;
+                                font-size: 25px;
+
+                                @media ( min-width: 768px ) and (max-width: 991px){
+                                    font-size: 22px;
+                                }
+
+                                @media ( max-width: 768px ){
+                                    font-size: 18px;
+                                }
+                            }
+
+                            &:hover {
+                                cursor: pointer;
+                            }
+
+                            &:focus::placeholder {
+                                opacity: 0;
+                                transition: opacity .3s ease;
+                            } 
+
+                        }
+
+                        .text-field {
+                            overflow: hidden;
+                            width: $full;
+                            position: relative;
+
+                            i {
+                                position: absolute;
+                                right: 10px;
+                                bottom: 20px;
+                               
+                            }
+                            
+                            
+                        }
+
+                        .control-div {
+                            width: 0;
+                            height: 0;
+                            font-size: 30px;
+                            overflow: hidden;
+                        }
+
+                        .border-bar {
+                            position: absolute;
+                            height: 2px;
+                            width: 0px;
+                            transition: width .3s ease;
+                            left: 0;
+                            top: 55px;
+                        }
+
+                        
+
+                    }
+
+
+                    select {
+                        width: $full;
+                        padding: .5rem .5rem 14px;
+                        border: none;
+                        outline: none;
+                        font-size: 25px;
+                        border-bottom: 2px solid $text-color;
+                        text-transform: capitalize;
+                        -webkit-appearance: none;
+                        background: none;
+                        
+                        option {
+                            font-size: 15px;
+                        }
+                        
+                    }
+
+
+
+                }
+
+
+            }
+            
+    
+        }
+
+
+
+
+    }
+    
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,103 @@
+
+
+// add new font's styles
+@font-face {
+    src: url('../fonts/hinted-GorditaBold.ttf');
+    font-family: 'Gordita Bold'; 
+}
+
+@font-face {
+    src: url('../fonts/hinted-GorditaMedium.ttf');
+    font-family: 'Gordita Medium';
+}
+
+@font-face {
+    src: url('../fonts/hinted-GorditaRegular.ttf');
+    font-family: 'Gordita Regular';
+}
+
+@font-face {
+    src: url('../fonts/A8ABDE12F18C753619F57193C5FA296E.TTF');
+    font-family: 'New Style';
+}
+
+// add new font's styles
+
+
+
+
+
+
+// define some styling classes
+
+.flex-bet-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-end-center {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+%full-image {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+
+.user-img-continer {
+    position: relative;
+    width: 35px;
+    height: 35px;
+}
+
+%img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.basic-btn {
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+
+.native-position {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.dis-flex {
+    display: flex;
+}
+
+.translate-up {
+    transform: translateY(-1.15rem);
+}
+
+.gray-color {
+    color: $text-color;
+}
+
+.opacity-0 {
+    opacity: 0;
+}
+
+.opacity-1 {
+    opacity: 1;
+}   
+
